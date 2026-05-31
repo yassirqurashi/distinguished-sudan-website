@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/container";
-import { MotionDiv, Reveal } from "@/components/motion";
+import { Reveal } from "@/components/motion";
+import { HeroDevices } from "@/components/hero-devices";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { projects, reasons, services } from "@/lib/data";
@@ -13,7 +13,7 @@ export default function Home() {
       <section className="hero-tech-bg relative overflow-hidden pt-32 text-white">
         <Container className="relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-14 pb-20 pt-12 lg:grid-cols-[1.05fr_0.95fr]">
           <Reveal>
-            <h1 className="text-balance text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">حلول رقمية للتحول الرقمي في السودان</h1>
+            <h1 className="text-balance text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">شريكك نحو التحول الرقمي في السودان</h1>
             <p className="mt-7 max-w-2xl text-lg leading-9 text-brand-mist sm:text-xl">
               نبني تطبيقات وأنظمة ومواقع وحلول ذكاء اصطناعي تساعد الشركات السودانية على النمو.
             </p>
@@ -28,19 +28,7 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <MotionDiv animate={{ y: [0, -14, 0] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }} className="relative mx-auto w-full max-w-3xl lg:-ml-8">
-            <div className="absolute inset-8 bg-brand-cyan/20 blur-3xl" />
-            <div className="relative overflow-visible">
-              <Image
-                src="/hero-finance-food-cutout.png"
-                alt="حاسوب محمول يعرض نظاماً مالياً وهاتف يعرض تطبيق توصيل طعام"
-                width={1536}
-                height={1024}
-                priority
-                className="h-auto w-full scale-100 object-contain drop-shadow-[0_34px_70px_rgba(0,0,0,0.38)] sm:scale-110"
-              />
-            </div>
-          </MotionDiv>
+          <HeroDevices />
         </Container>
       </section>
 
