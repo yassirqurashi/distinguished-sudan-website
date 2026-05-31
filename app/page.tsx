@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/motion";
-import { HeroDevices } from "@/components/hero-devices";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { projects, reasons, services } from "@/lib/data";
@@ -11,10 +10,10 @@ export default function Home() {
   return (
     <main>
       <section className="hero-tech-bg relative overflow-hidden pt-32 text-white">
-        <Container className="relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-14 pb-20 pt-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <Container className="relative z-10 flex min-h-[calc(100vh-4rem)] items-center pb-20 pt-12">
           <Reveal>
-            <h1 className="text-balance text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">شريكك نحو التحول الرقمي في السودان</h1>
-            <p className="mt-7 max-w-2xl text-lg leading-9 text-brand-mist sm:text-xl">
+            <h1 className="max-w-5xl text-balance text-4xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">شريكك نحو التحول الرقمي في السودان</h1>
+            <p className="mt-7 max-w-3xl text-lg leading-9 text-brand-mist sm:text-xl">
               نبني تطبيقات وأنظمة ومواقع وحلول ذكاء اصطناعي تساعد الشركات السودانية على النمو.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -27,8 +26,6 @@ export default function Home() {
               </Link>
             </div>
           </Reveal>
-
-          <HeroDevices />
         </Container>
       </section>
 

@@ -32,29 +32,30 @@ body {
 }
 
 .hero-tech-bg {
-  background:
-    linear-gradient(90deg, rgba(0, 32, 80, 0.74) 0%, rgba(0, 32, 80, 0.56) 42%, rgba(0, 20, 51, 0.34) 100%),
-    linear-gradient(180deg, rgba(0, 11, 29, 0.06) 0%, rgba(0, 11, 29, 0.76) 100%),
-    url("/sudan-neelain-hero.png");
-  background-position: center center;
-  background-size: cover;
+  background: #00142d;
 }
 
 .hero-tech-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 72% 28%, rgba(0, 176, 168, 0.22), transparent 30%),
-    radial-gradient(circle at 18% 74%, rgba(0, 163, 176, 0.18), transparent 28%);
-  opacity: 0.48;
+  background-image: url("/sudan-neelain-hero.png");
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  transform: translateX(-18%) scale(1.08);
+  transform-origin: center;
 }
 
 .hero-tech-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 11, 29, 0.22) 0%, transparent 48%, rgba(0, 11, 29, 0.18) 100%);
+  background:
+    linear-gradient(90deg, rgba(0, 32, 80, 0.74) 0%, rgba(0, 32, 80, 0.56) 42%, rgba(0, 20, 51, 0.34) 100%),
+    linear-gradient(180deg, rgba(0, 11, 29, 0.06) 0%, rgba(0, 11, 29, 0.76) 100%),
+    radial-gradient(circle at 72% 28%, rgba(0, 176, 168, 0.22), transparent 30%),
+    radial-gradient(circle at 18% 74%, rgba(0, 163, 176, 0.18), transparent 28%);
 }
 
 .hero-devices {
