@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Container } from "@/components/container";
@@ -16,12 +17,16 @@ export default function PortfolioPage() {
           <div className="grid gap-6 lg:grid-cols-3">
             {projects.map((project, index) => (
               <Reveal key={project.title} delay={index * 0.06}>
-                <article className="h-full rounded-lg border border-brand-mist bg-white p-7 shadow-soft transition hover:-translate-y-2 hover:border-brand-cyan">
-                  <div className="mb-10 h-48 rounded-lg bg-brand-radial p-5" />
-                  <span className="text-sm font-extrabold text-brand-teal">{project.category}</span>
-                  <h2 className="mt-3 text-2xl font-extrabold leading-9 text-brand-navy">{project.title}</h2>
-                  <p className="mt-4 leading-8 text-brand-slate">{project.description}</p>
-                </article>
+                <Link href={project.href} className="group block h-full overflow-hidden rounded-lg border border-brand-mist bg-white shadow-soft transition hover:-translate-y-2 hover:border-brand-cyan">
+                  <div className="relative aspect-square overflow-hidden bg-brand-navy">
+                    <Image src={project.image} alt={project.title} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" />
+                  </div>
+                  <article className="p-7">
+                    <h2 className="text-2xl font-extrabold leading-9 text-brand-navy">{project.title}</h2>
+                    <p className="mt-4 leading-8 text-brand-slate">{project.description}</p>
+                    <span className="mt-6 inline-flex text-sm font-extrabold text-brand-teal transition group-hover:text-brand-navy">اقرأ تفاصيل المشروع</span>
+                  </article>
+                </Link>
               </Reveal>
             ))}
           </div>

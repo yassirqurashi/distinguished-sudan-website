@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/container";
@@ -57,15 +58,20 @@ export default function Home() {
 
       <section className="bg-brand-mist/35 py-24">
         <Container>
-          <SectionHeading eyebrow="أعمال مختارة" title="مشاريع رقمية مصممة لتبسيط العمل ورفع الكفاءة" description="نماذج من أنواع الحلول التي نبنيها للشركات التي تريد الانتقال من الأدوات المتفرقة إلى أنظمة متكاملة." />
+          <SectionHeading eyebrow="أعمال مختارة" title="مشاريع رقمية مصممة لتبسيط العمل ورفع الكفاءة" description="بعض المشاريع التي طورها فريقنا الرائع أو شارك في تطويرها." />
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
             {projects.map((project, index) => (
               <Reveal key={project.title} delay={index * 0.06}>
-                <div className="h-full rounded-lg border border-brand-mist bg-white p-7 shadow-soft transition hover:-translate-y-2 hover:border-brand-cyan">
-                  <span className="mb-8 inline-flex rounded-full bg-brand-navy px-4 py-2 text-sm font-extrabold text-brand-cyan">{project.category}</span>
-                  <h3 className="mb-4 text-2xl font-extrabold text-brand-navy">{project.title}</h3>
-                  <p className="leading-8 text-brand-slate">{project.description}</p>
-                </div>
+                <Link href={project.href} className="group block h-full overflow-hidden rounded-lg border border-brand-mist bg-white shadow-soft transition hover:-translate-y-2 hover:border-brand-cyan">
+                  <div className="relative aspect-square overflow-hidden bg-brand-navy">
+                    <Image src={project.image} alt={project.title} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="p-7">
+                    <h3 className="mb-4 text-2xl font-extrabold text-brand-navy">{project.title}</h3>
+                    <p className="leading-8 text-brand-slate">{project.description}</p>
+                    <span className="mt-6 inline-flex text-sm font-extrabold text-brand-teal transition group-hover:text-brand-navy">اقرأ تفاصيل المشروع</span>
+                  </div>
+                </Link>
               </Reveal>
             ))}
           </div>
