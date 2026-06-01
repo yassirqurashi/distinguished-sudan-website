@@ -1,5 +1,6 @@
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Container } from "@/components/container";
+import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion";
 
@@ -26,18 +27,7 @@ export default function ContactPage() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <form className="rounded-lg border border-brand-mist bg-white p-6 shadow-soft md:p-8">
-              <div className="grid gap-5 md:grid-cols-2">
-                <input className="rounded-lg border border-brand-mist px-4 py-4 outline-none transition focus:border-brand-cyan" placeholder="الاسم" />
-                <input className="rounded-lg border border-brand-mist px-4 py-4 outline-none transition focus:border-brand-cyan" placeholder="الشركة" />
-                <input type="email" className="rounded-lg border border-brand-mist px-4 py-4 outline-none transition focus:border-brand-cyan" placeholder="البريد الإلكتروني" />
-                <select className="rounded-lg border border-brand-mist bg-white px-4 py-4 outline-none transition focus:border-brand-cyan">
-                  <option>تطوير تطبيقات الجوال</option><option>أنظمة ERP</option><option>وكلاء الذكاء الاصطناعي والأتمتة</option><option>المواقع الإلكترونية</option><option>WhatsApp Business API</option><option>الاستشارات التقنية</option>
-                </select>
-              </div>
-              <textarea className="mt-5 min-h-40 w-full rounded-lg border border-brand-mist px-4 py-4 outline-none transition focus:border-brand-cyan" placeholder="تفاصيل المشروع" />
-              <button type="button" className="mt-6 w-full rounded-full bg-brand-cyan px-7 py-4 text-base font-extrabold text-brand-navy shadow-glow transition hover:-translate-y-1 hover:bg-brand-teal hover:text-white">إرسال الطلب</button>
-            </form>
+            <ContactForm />
           </Reveal>
         </Container>
       </section>

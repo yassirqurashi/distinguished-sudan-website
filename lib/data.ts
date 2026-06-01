@@ -9,12 +9,12 @@ export const navLinks = [
 ];
 
 export const services = [
-  { title: "تطوير تطبيقات الهاتف المحمول", description: "تطبيقات iOS وAndroid حديثة وسريعة ومصممة لتجربة استخدام واضحة.", icon: Smartphone, visual: "mobile" },
-  { title: "أنظمة ERP", description: "أنظمة تشغيل داخلية تربط المبيعات والمخزون والموارد والمالية في مكان واحد.", icon: Building2, visual: "erp" },
-  { title: "وكلاء الذكاء الاصطناعي والأتمتة", description: "وكلاء ذكيون وسير عمل آلي يقللان الأعمال المتكررة ويرفعان سرعة التنفيذ.", icon: Bot, visual: "ai" },
-  { title: "المواقع الإلكترونية", description: "مواقع تعريفية وتجارية أنيقة، متجاوبة، وسهلة النشر على Vercel.", icon: Globe2, visual: "web" },
-  { title: "WhatsApp Business API", description: "حلول محادثات وتنبيهات وربط مبيعات ودعم عبر WhatsApp Business API.", icon: MessageCircle, visual: "whatsapp" },
-  { title: "الاستشارات التقنية", description: "خارطة طريق تقنية تساعد الإدارة على اختيار الأنظمة والاستثمار بثقة.", icon: Compass, visual: "consulting" }
+  { title: "تطوير تطبيقات الهاتف المحمول", description: "تطبيقات iOS وAndroid حديثة وسريعة ومصممة لتجربة استخدام واضحة.", icon: Smartphone, visual: "mobile", href: "/services/mobile-app-development" },
+  { title: "أنظمة ERP", description: "أنظمة تشغيل داخلية تربط المبيعات والمخزون والموارد والمالية في مكان واحد.", icon: Building2, visual: "erp", href: "/services/erp-systems" },
+  { title: "وكلاء الذكاء الاصطناعي والأتمتة", description: "وكلاء ذكيون وسير عمل آلي يقللان الأعمال المتكررة ويرفعان سرعة التنفيذ.", icon: Bot, visual: "ai", href: "/services/ai-agents-automation" },
+  { title: "المواقع الإلكترونية", description: "مواقع تعريفية وتجارية أنيقة، متجاوبة، وسهلة النشر على Vercel.", icon: Globe2, visual: "web", href: "/services/websites" },
+  { title: "WhatsApp Business API", description: "حلول محادثات وتنبيهات وربط مبيعات ودعم عبر WhatsApp Business API.", icon: MessageCircle, visual: "whatsapp", href: "/services/whatsapp-business-api" },
+  { title: "الاستشارات التقنية", description: "خارطة طريق تقنية تساعد الإدارة على اختيار الأنظمة والاستثمار بثقة.", icon: Compass, visual: "consulting", href: "/services/technical-consulting" }
 ] as const;
 
 export const reasons = [

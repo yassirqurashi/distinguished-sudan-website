@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { Reveal } from "@/components/motion";
 
@@ -7,12 +8,14 @@ export function ServiceCard({
   description,
   icon: Icon,
   visual,
+  href,
   delay = 0
 }: {
   title: string;
   description: string;
   icon?: LucideIcon;
   visual?: string;
+  href?: string;
   delay?: number;
 }) {
   const generatedIcons: Record<string, { src: string; alt: string }> = {
@@ -24,26 +27,38 @@ export function ServiceCard({
     consulting: { src: "/consulting-service-icon.png", alt: "Technical consulting icon" }
   };
   const generatedIcon = visual ? generatedIcons[visual] : null;
+  const cardContent = (
+    <>
+      <div className={`mb-8 flex h-16 w-16 items-center justify-center transition duration-300 ${generatedIcon ? "" : "rounded-2xl border border-brand-cyan/30 bg-brand-cyan/10 text-brand-teal group-hover:bg-brand-cyan group-hover:text-brand-navy"}`}>
+        {generatedIcon ? (
+          <Image
+            src={generatedIcon.src}
+            alt={generatedIcon.alt}
+            width={72}
+            height={66}
+            className="h-20 w-20 scale-125 object-contain drop-shadow-[0_12px_28px_rgba(0,32,80,0.18)]"
+          />
+        ) : Icon ? (
+          <Icon size={34} strokeWidth={1.7} />
+        ) : null}
+      </div>
+      <h3 className="mb-4 text-2xl font-extrabold leading-9 text-brand-navy">{title}</h3>
+      <p className="text-lg leading-9 text-brand-slate">{description}</p>
+      {href ? <span className="mt-7 inline-flex text-sm font-extrabold text-brand-teal transition group-hover:text-brand-navy">اقرأ المزيد</span> : null}
+    </>
+  );
 
   return (
     <Reveal delay={delay}>
-      <div className="group h-full rounded-lg border border-brand-mist bg-white p-8 shadow-soft transition duration-300 hover:-translate-y-2 hover:border-brand-cyan">
-        <div className={`mb-8 flex h-16 w-16 items-center justify-center transition duration-300 ${generatedIcon ? "" : "rounded-2xl border border-brand-cyan/30 bg-brand-cyan/10 text-brand-teal group-hover:bg-brand-cyan group-hover:text-brand-navy"}`}>
-          {generatedIcon ? (
-            <Image
-              src={generatedIcon.src}
-              alt={generatedIcon.alt}
-              width={72}
-              height={66}
-              className="h-20 w-20 scale-125 object-contain drop-shadow-[0_12px_28px_rgba(0,32,80,0.18)]"
-            />
-          ) : Icon ? (
-            <Icon size={34} strokeWidth={1.7} />
-          ) : null}
+      {href ? (
+        <Link href={href} className="group block h-full rounded-lg border border-brand-mist bg-white p-8 shadow-soft transition duration-300 hover:-translate-y-2 hover:border-brand-cyan">
+          {cardContent}
+        </Link>
+      ) : (
+        <div className="group h-full rounded-lg border border-brand-mist bg-white p-8 shadow-soft transition duration-300 hover:-translate-y-2 hover:border-brand-cyan">
+          {cardContent}
         </div>
-        <h3 className="mb-4 text-2xl font-extrabold leading-9 text-brand-navy">{title}</h3>
-        <p className="text-lg leading-9 text-brand-slate">{description}</p>
-      </div>
+      )}
     </Reveal>
   );
 }

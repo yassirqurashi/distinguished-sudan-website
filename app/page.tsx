@@ -31,7 +31,7 @@ export default function Home() {
 
       <section className="bg-white py-24">
         <Container>
-          <SectionHeading eyebrow="خدماتنا" title="كل ما تحتاجه الشركة لبناء تجربة رقمية متماسكة" description="من الفكرة والاستشارة إلى التصميم والتطوير والنشر، نربط الأدوات الرقمية بأهداف العمل اليومية." />
+          <SectionHeading eyebrow="خدماتنا" title="كل ما يحتاجه عملك لبناء تجربة رقمية مثالية" description="من الفكرة والاستشارة إلى التصميم والتطوير والنشر، نربط الأدوات الرقمية بأهداف العمل اليومية." />
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => <ServiceCard key={service.title} {...service} delay={index * 0.05} />)}
           </div>
@@ -87,7 +87,7 @@ export default function Home() {
                     <span className="font-bold">{item}</span>
                   </div>
                 ))}
-                <Link href="/contact" className="mt-4 inline-flex rounded-full bg-brand-cyan px-7 py-4 font-extrabold text-brand-navy transition hover:-translate-y-1 hover:bg-brand-teal hover:text-white">احجز استشارة</Link>
+                <Link href="https://calendly.com/dds-sudan/30min" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex rounded-full bg-brand-cyan px-7 py-4 font-extrabold text-brand-navy transition hover:-translate-y-1 hover:bg-brand-teal hover:text-white">احجز استشارة</Link>
               </div>
             </div>
           </Reveal>
