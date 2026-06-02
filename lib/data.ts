@@ -9,11 +9,11 @@ export const navLinks = [
 ];
 
 export const services = [
-  { title: "تطوير تطبيقات الهاتف المحمول", description: "تطبيقات iOS وAndroid حديثة وسريعة ومصممة لتجربة استخدام واضحة.", icon: Smartphone, visual: "mobile", href: "/services/mobile-app-development" },
-  { title: "أنظمة ERP", description: "أنظمة تشغيل داخلية تربط المبيعات والمخزون والموارد والمالية في مكان واحد.", icon: Building2, visual: "erp", href: "/services/erp-systems" },
+  { title: "تطوير تطبيقات الهاتف المحمول", description: "تطوير تطبيقات وفق أحدث المعايير باستخدام لغات برمجة متقدمة لتقديم أفضل تجربة للعملاء.", icon: Smartphone, visual: "mobile", href: "/services/mobile-app-development" },
+  { title: "أنظمة ERP", description: "أفضل وحدات ERP مثل المبيعات، المالية، المخزون، المشتريات، وأي وحدات مخصصة يحتاجها عملك.", icon: Building2, visual: "erp", href: "/services/erp-systems" },
   { title: "وكلاء الذكاء الاصطناعي والأتمتة", description: "وكلاء ذكيون وسير عمل آلي يقللان الأعمال المتكررة ويرفعان سرعة التنفيذ.", icon: Bot, visual: "ai", href: "/services/ai-agents-automation" },
-  { title: "المواقع الإلكترونية", description: "مواقع تعريفية وتجارية أنيقة، متجاوبة، وسهلة النشر على Vercel.", icon: Globe2, visual: "web", href: "/services/websites" },
-  { title: "WhatsApp Business API", description: "حلول محادثات وتنبيهات وربط مبيعات ودعم عبر WhatsApp Business API.", icon: MessageCircle, visual: "whatsapp", href: "/services/whatsapp-business-api" },
+  { title: "المواقع الإلكترونية", description: "مواقع تعريفية وتجارية أنيقة وسريعة تساعد عملك على الظهور باحترافية وبناء حضور رقمي واضح.", icon: Globe2, visual: "web", href: "/services/websites" },
+  { title: "WhatsApp Business API", description: "حملات WhatsApp رسمية بدون حظر، أتمتة الفواتير عبر WhatsApp، ووكلاء ذكاء اصطناعي يردون على عملائك.", icon: MessageCircle, visual: "whatsapp", href: "/services/whatsapp-business-api" },
   { title: "الاستشارات التقنية", description: "خارطة طريق تقنية تساعد الإدارة على اختيار الأنظمة والاستثمار بثقة.", icon: Compass, visual: "consulting", href: "/services/technical-consulting" }
 ] as const;
 
