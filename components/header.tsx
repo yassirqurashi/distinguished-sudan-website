@@ -33,7 +33,7 @@ export function Header() {
           ))}
         </nav>
 
-        <button type="button" className="order-first inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brand-mist text-brand-navy lg:order-none lg:hidden" onClick={() => setOpen((value) => !value)} aria-label="فتح القائمة">
+        <button type="button" className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brand-mist text-brand-navy lg:hidden" onClick={() => setOpen((value) => !value)} aria-label="فتح القائمة">
           {open ? <X size={21} /> : <Menu size={21} />}
         </button>
       </Container>
