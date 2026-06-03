@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AiChatbot } from "@/components/ai-chatbot";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
+        <AiChatbot />
       </body>
     </html>
   );

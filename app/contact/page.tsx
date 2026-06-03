@@ -4,15 +4,16 @@ import { Container } from "@/components/container";
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion";
+import { contactInfo } from "@/lib/contact-info";
 
 export const metadata = { title: "تواصل معنا | المتميزون Distinguished" };
 
 const contactDetails: { icon: LucideIcon; title: string; text: string; href?: string }[] = [
-  { icon: MessageCircle, title: "WhatsApp", text: "+249 91238703", href: "https://wa.me/24991238703" },
-  { icon: Phone, title: "Phone", text: "+249 91238703", href: "tel:+24991238703" }
+  { icon: MessageCircle, title: "WhatsApp", text: contactInfo.whatsapp.label, href: contactInfo.whatsapp.href },
+  { icon: Phone, title: "Phone", text: contactInfo.phone.label, href: contactInfo.phone.href }
 ];
 
-const emails = ["info@dds-sd.com", "ashraf@dds-sd.com"];
+const emails = [...contactInfo.emails];
 
 export default function ContactPage() {
   return (
