@@ -42,5 +42,35 @@ export const projects = [
     description: "منصة مملوكة بالكامل لشركة المتميزون عمان، تجمع مكاتب تأجير السيارات في تطبيق واحد مع ERP لإدارة العمليات اليومية والأسطول.",
     image: "/mortad-app.png",
     href: "/portfolio/mortad-app"
+  },
+  {
+    title: "تطبيق الفا قولد",
+    description: "منصة تداول ذهب طورها فريقنا لعميل في الإمارات، تتيح شراء الذهب الحقيقي من متاجر معتمدة بأسعار عالمية محدثة على مدار الساعة.",
+    image: "/alpha-gold-app.png",
+    href: "/portfolio/alpha-gold-app"
+  },
+  {
+    title: "تطبيق كلينيكال",
+    description: "منصة طبية تربط المرضى بالأطباء والمستشفيات، وتدعم الاستشارات الافتراضية ومشاركة نتائج المختبر والوصفات الطبية.",
+    image: "/clinical-app.png",
+    href: "/portfolio/clinical-app"
+  },
+  {
+    title: "Prime Trucks ERP",
+    description: "نظام ERP متكامل طوره فريقنا لعميل في الإمارات، ويشمل وحدات رئيسية مثل المبيعات، المالية، المخزون، والمشتريات.",
+    image: "/prime-trucks-erp.png",
+    href: "/portfolio/prime-trucks-erp"
+  },
+  {
+    title: "Housemaid Management ERP",
+    description: "نظام ERP طوره فريقنا لعميل في عُمان لإدارة مكاتب استقدام العاملات من الإجراءات الخارجية وحتى الوصول، مع عقود وتنبيهات WhatsApp آلية.",
+    image: "/housemaid-erp.png",
+    href: "/portfolio/housemaid-management-erp"
+  },
+  {
+    title: "موقع جانيكا للعطور",
+    description: "موقع سوق إلكتروني طوره فريقنا لعميل في عُمان لعرض وبيع تشكيلة واسعة من العطور في عدة دول.",
+    image: "/jankia-perfumes-website.png",
+    href: "/portfolio/jankia-perfumes-website"
   }
 ];
